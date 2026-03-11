@@ -37,3 +37,21 @@ A controlled anomaly (latency_spike) is injected using the /api/slow?hard=1 endp
 . traffic_generator.py & log_exporter.py: Python automation scripts.
 
 . aiops.log: The raw application log file.
+
+---
+
+##  Lab Work 2: AIOps Detection Engine
+
+In this phase, we built a proactive AIOps Detection Engine within Laravel to monitor system telemetry, establish dynamic baselines, and correlate anomalies in real-time based on Prometheus metrics.
+
+###  Implemented Requirements (100% Compliance)
+
+* **1. Detection Engine Command:** Developed a continuous daemon command (`php artisan aiops:detect --daemon`) with configurable flags (`--sensitivity`, `--alert-threshold`, `--dry-run`, `--baseline-window`) scanning every 10 seconds.
+* **2. Prometheus Metrics Integration:** Integrated with the Prometheus HTTP API to dynamically query `http_requests_total`, `http_errors_total`, and `http_request_duration_seconds_bucket`.
+* **3. Baseline Modeling:** Engineered a baseline modeling system that computes normal behavior during a predefined window. Data is persisted securely in a relational database (`aiops_baselines` table) capturing `window_start` and `window_end`.
+* **4 & 5. Multi-Signal Detection & Event Correlation:** Implemented a correlation matrix that maps combined signal deviations (Traffic, Latency, Errors) to precise Root Causes (e.g., `RESOURCE_EXHAUSTION`, `APPLICATION_BUG`, `DATABASE_FAILURE`, `SERVICE_DEGRADATION`).
+* **6. Structured Incident Generation:** Configured a logging mechanism that generates detailed JSON incident reports mapping Incident IDs to timestamps, root causes, and signal snapshots (`storage/logs/incidents.json`).
+* **7. Alerting System:** Built a real-time alerting system outputting structured terminal warnings (Timestamp, Severity, Incident ID, Root Cause Summary) while simultaneously triggering a Laravel Event (`IncidentCreated`) for background processing.
+
+### Evidence
+Screenshots validating the baseline database persistence, proactive alerting, and incident generation are available in the `lab2-screenshots/` directory.
