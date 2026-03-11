@@ -7,13 +7,13 @@ use Illuminate\Support\Facades\Log;
 
 class PrometheusService
 {
-    // استخدام 127.0.0.1 بيحل مشكلة تعليقة الـ localhost في الويندوز
+    
     private $prometheusUrl = 'http://127.0.0.1:9090/api/v1/query';
 
     public function query($query)
     {
         try {
-            // إجبار لارفيل إنه مايستناش أكتر من ثانيتين (عشان ميعلقش إطلاقاً)
+            
             $response = Http::timeout(2)->connectTimeout(2)->get($this->prometheusUrl, [
                 'query' => $query
             ]);
@@ -28,7 +28,7 @@ class PrometheusService
             }
             return 0.0;
         } catch (\Exception $e) {
-            // لو حصل أي تأخير أو بروميثيوس قافل، هيطبع الإيرور ويكمل بأصفار بدل ما يعلق
+            
             echo "\n[CONNECTION ERROR] Prometheus is not responding or taking too long.\n";
             Log::error("Prometheus Connection Error: " . $e->getMessage());
             return 0.0;

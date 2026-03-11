@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id();
             $table->string('metric_name'); 
             $table->float('value'); 
-            // أضفنا الأعمدة دي عشان مطابقة Requirement 3 في الصورة
+            
             $table->timestamp('window_start')->nullable();
             $table->timestamp('window_end')->nullable();
             $table->timestamps(); 

@@ -8578,5 +8578,413 @@
             "errors": 0.157
         },
         "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-B3WINQ",
+        "timestamp": "2026-03-11T23:04:35+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.15,
+            "latency": 5,
+            "errors": 0.15
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-1TEFUA",
+        "timestamp": "2026-03-11T23:04:45+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.16,
+            "latency": 5,
+            "errors": 0.157
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-ZSRC30",
+        "timestamp": "2026-03-11T23:04:55+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.15,
+            "latency": 5,
+            "errors": 0.15
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-1MWTWV",
+        "timestamp": "2026-03-11T23:05:05+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.16,
+            "latency": 5,
+            "errors": 0.157
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-5RFJ6R",
+        "timestamp": "2026-03-11T23:05:15+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.15,
+            "latency": 5,
+            "errors": 0.15
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-H4VQY5",
+        "timestamp": "2026-03-11T23:05:25+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.16,
+            "latency": 5,
+            "errors": 0.157
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-BJXZ6B",
+        "timestamp": "2026-03-11T23:05:35+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.16,
+            "latency": 5,
+            "errors": 0.157
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-HNVYAZ",
+        "timestamp": "2026-03-11T23:05:45+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.15,
+            "latency": 5,
+            "errors": 0.148
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-TDJXVV",
+        "timestamp": "2026-03-11T23:05:55+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.16,
+            "latency": 5,
+            "errors": 0.157
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-2SJ9QR",
+        "timestamp": "2026-03-11T23:06:06+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.15,
+            "latency": 5,
+            "errors": 0.148
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-PAPITE",
+        "timestamp": "2026-03-11T23:06:16+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.16,
+            "latency": 5,
+            "errors": 0.157
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-RPLZKG",
+        "timestamp": "2026-03-11T23:06:26+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.16,
+            "latency": 5,
+            "errors": 0.157
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-QGMLBS",
+        "timestamp": "2026-03-11T23:06:36+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.16,
+            "latency": 5,
+            "errors": 0.164
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-RN4MHK",
+        "timestamp": "2026-03-11T23:06:46+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.16,
+            "latency": 5,
+            "errors": 0.156
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-IETLXZ",
+        "timestamp": "2026-03-11T23:06:56+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.16,
+            "latency": 5,
+            "errors": 0.157
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-WDCRJR",
+        "timestamp": "2026-03-11T23:07:06+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.16,
+            "latency": 5,
+            "errors": 0.156
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-NBF3JB",
+        "timestamp": "2026-03-11T23:07:16+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.16,
+            "latency": 5,
+            "errors": 0.157
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-UEM6VG",
+        "timestamp": "2026-03-11T23:07:26+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.15,
+            "latency": 5,
+            "errors": 0.155
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-CTJRJF",
+        "timestamp": "2026-03-11T23:07:36+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.16,
+            "latency": 5,
+            "errors": 0.157
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-PRDI6K",
+        "timestamp": "2026-03-11T23:07:46+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.16,
+            "latency": 5,
+            "errors": 0.156
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-FDICSX",
+        "timestamp": "2026-03-11T23:07:56+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.16,
+            "latency": 5,
+            "errors": 0.157
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-U0DJ4C",
+        "timestamp": "2026-03-11T23:08:06+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.16,
+            "latency": 5,
+            "errors": 0.156
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-1RZTUJ",
+        "timestamp": "2026-03-11T23:08:16+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.16,
+            "latency": 5,
+            "errors": 0.157
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-7OWGJV",
+        "timestamp": "2026-03-11T23:08:26+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.15,
+            "latency": 5,
+            "errors": 0.148
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-JNMI57",
+        "timestamp": "2026-03-11T23:08:36+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.15,
+            "latency": 5,
+            "errors": 0.148
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-8L72RL",
+        "timestamp": "2026-03-11T23:08:46+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.16,
+            "latency": 5,
+            "errors": 0.157
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-9NO1YN",
+        "timestamp": "2026-03-11T23:08:56+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.15,
+            "latency": 5,
+            "errors": 0.148
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-VFGU9G",
+        "timestamp": "2026-03-11T23:09:06+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.15,
+            "latency": 5,
+            "errors": 0.155
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-ODLYD8",
+        "timestamp": "2026-03-11T23:09:16+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.15,
+            "latency": 5,
+            "errors": 0.147
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-ESPXUA",
+        "timestamp": "2026-03-11T23:09:26+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.15,
+            "latency": 5,
+            "errors": 0.155
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-QWOM3X",
+        "timestamp": "2026-03-11T23:09:36+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.15,
+            "latency": 5,
+            "errors": 0.147
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-NIJIQQ",
+        "timestamp": "2026-03-11T23:09:46+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.16,
+            "latency": 5,
+            "errors": 0.157
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-IGC6UL",
+        "timestamp": "2026-03-11T23:09:56+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.16,
+            "latency": 5,
+            "errors": 0.157
+        },
+        "status": "OPEN"
+    },
+    {
+        "incident_id": "INC-EX4PZ1",
+        "timestamp": "2026-03-11T23:10:06+00:00",
+        "root_cause": "APPLICATION_BUG",
+        "severity": "WARNING",
+        "signals": {
+            "traffic": 0.15,
+            "latency": 5,
+            "errors": 0.147
+        },
+        "status": "OPEN"
     }
 ]

@@ -5,12 +5,12 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use App\Services\PrometheusService;
 use App\Models\AiopsBaseline; 
-use App\Events\IncidentCreated; // 🔥 أضفنا استدعاء الـ Event هنا
+use App\Events\IncidentCreated; 
 use Illuminate\Support\Str;
 
 class AiopsDetectCommand extends Command
 {
-    // Requirement 1: تعريف الأمر والـ Flags المطلوبة
+    
     protected $signature = 'aiops:detect 
                             {--daemon} 
                             {--baseline-window=5} 
@@ -40,7 +40,7 @@ class AiopsDetectCommand extends Command
     private function runDetectionCycle(PrometheusService $prometheus)
     {
         try {
-            // Requirement 2: سحب البيانات من PrometheusService
+            
             $currentTraffic = (float) $prometheus->getRequestRate();
             $currentErrors = (float) $prometheus->getErrorRate();
             $currentLatency = (float) $prometheus->getP95Latency();
@@ -50,14 +50,14 @@ class AiopsDetectCommand extends Command
                 return;
             }
 
-            // Requirement 3: سحب الـ Baseline من قاعدة البيانات
+            
             $baselineTraffic = $this->getOrCreateBaseline('traffic', $currentTraffic);
-            $baselineLatency = 5.0; // قيمة ثابتة لتجنب الـ False Positives في البيئة المحلية
+            $baselineLatency = 5.0; 
 
             $sensitivity = (float) $this->option('sensitivity');
             $alertThreshold = (float) $this->option('alert-threshold');
 
-            // Requirement 4: كشف الانحرافات (Anomaly Detection)
+           
             $isTrafficSpike = $currentTraffic > ($baselineTraffic * $sensitivity) && $currentTraffic > 5;
             $isLatencySpike = $currentLatency > 7.0; 
             $isErrorSpike = $currentErrors > $alertThreshold;
@@ -65,7 +65,7 @@ class AiopsDetectCommand extends Command
             $rootCause = null;
             $severity = 'INFO';
 
-            // Requirement 5: تحديد السبب الجذري (Event Correlation)
+           
             if ($isErrorSpike && $isLatencySpike) {
                 $rootCause = 'DATABASE_FAILURE';
                 $severity = 'CRITICAL';
@@ -88,13 +88,13 @@ class AiopsDetectCommand extends Command
                     'errors' => round($currentErrors, 3)
                 ];
 
-                // 🔥 Requirement 7: Trigger Laravel Event
+                
                 event(new IncidentCreated($incidentId, $severity, $signals, "Anomaly: $rootCause"));
 
-                // Requirement 7: Alerting in Console
+                
                 $this->error("[" . now()->format('H:i:s') . "] [ALERT] [$severity] Anomaly Detected: $rootCause (ID: $incidentId)");
 
-                // Requirement 6: Structured Incident Generation (JSON)
+                
                 if (!$this->option('dry-run')) {
                     $this->generateIncidentFile($incidentId, $rootCause, $severity, $signals);
                 }
@@ -106,7 +106,7 @@ class AiopsDetectCommand extends Command
         }
     }
 
-    // Requirement 3: Baseline Modeling (Database Storage)
+    
     private function getOrCreateBaseline($metricName, $currentValue)
     {
         $windowMinutes = (int) $this->option('baseline-window');
@@ -123,7 +123,7 @@ class AiopsDetectCommand extends Command
         return (float) $baseline->value;
     }
 
-    // Requirement 6: Structured Incident Logging
+    
     private function generateIncidentFile($incidentId, $rootCause, $severity, $signals)
     {
         $file = storage_path('logs/incidents.json');
