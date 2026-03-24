@@ -66,8 +66,8 @@ In this final phase, we implemented a Machine Learning pipeline to automatically
 
 * **1. Dataset Construction:** Extracted raw logs and engineered a structured dataset using 30-second time windows. Addressed missing timestamps via synthetic sequencing to maintain temporal order.
 * **2. Feature Engineering:** Computed 7 key operational features per window: `avg_latency`, `max_latency`, `request_rate`, `error_rate`, `latency_std`, `errors_per_window`, and `endpoint_frequency`.
-* **3. Model Training:** Utilized the **Isolation Forest** algorithm. Adhering to strict constraints, the model was trained exclusively on the initial 60% of the timeline (the confirmed normal behavior period).
-* **4. Anomaly Prediction:** The model successfully generalized to the full dataset, accurately assigning high anomaly scores to the exact window where the latency spike (>3500ms) was artificially injected.
+* **3. Model Training:** Utilized the **Isolation Forest** algorithm with dynamic anomaly thresholding (`contamination='auto'`). Adhering to strict constraints, the model was trained exclusively on the first 5 minutes of the timeline (the confirmed normal behavior baseline).
+* **4. Anomaly Prediction:** The model successfully generalized to the full dataset, accurately assigning high anomaly scores to the exact window where the latency spike (reaching ~7000ms) was artificially injected.
 * **5. Visualization:** Generated comparative timelines highlighting detected anomalies against average latency and error rates (`anomaly_visualization.png`).
 
 ###  Deliverables
