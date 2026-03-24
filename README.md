@@ -55,3 +55,24 @@ In this phase, we built a proactive AIOps Detection Engine within Laravel to mon
 
 ### Evidence
 Screenshots validating the baseline database persistence, proactive alerting, and incident generation are available in the `lab2-screenshots/` directory.
+
+---
+
+##  Lab Work 3: ML Anomaly Detection
+
+In this final phase, we implemented a Machine Learning pipeline to automatically detect system anomalies based on telemetry data from Lab 1.
+
+###  Implementation Details
+
+* **1. Dataset Construction:** Extracted raw logs and engineered a structured dataset using 30-second time windows. Addressed missing timestamps via synthetic sequencing to maintain temporal order.
+* **2. Feature Engineering:** Computed 7 key operational features per window: `avg_latency`, `max_latency`, `request_rate`, `error_rate`, `latency_std`, `errors_per_window`, and `endpoint_frequency`.
+* **3. Model Training:** Utilized the **Isolation Forest** algorithm. Adhering to strict constraints, the model was trained exclusively on the initial 60% of the timeline (the confirmed normal behavior period).
+* **4. Anomaly Prediction:** The model successfully generalized to the full dataset, accurately assigning high anomaly scores to the exact window where the latency spike (>3500ms) was artificially injected.
+* **5. Visualization:** Generated comparative timelines highlighting detected anomalies against average latency and error rates (`anomaly_visualization.png`).
+
+###  Deliverables
+- `ml_aiops.py`: Full ML pipeline script.
+- `aiops_dataset.csv`: Engineered feature dataset.
+- `anomaly_predictions.csv`: Model predictions and scores.
+- `anomaly_visualization.png`: Visual proof of accurate detection.
+- `Lab3_ML_Report.pdf`: Engineering report detailing feature selection and model performance.
