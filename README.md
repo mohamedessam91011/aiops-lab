@@ -76,3 +76,16 @@ In this final phase, we implemented a Machine Learning pipeline to automatically
 - `anomaly_predictions.csv`: Model predictions and scores.
 - `anomaly_visualization.png`: Visual proof of accurate detection.
 - `Lab3_ML_Report.pdf`: Engineering report detailing feature selection and model performance.
+
+## Lab 5: Automated Incident Response
+
+In this final phase, a fully functional Automation Engine was developed in Laravel to automatically mitigate system anomalies detected in previous labs.
+
+### Implementation Details:
+1. **Automation Engine Command (`aiops:respond`):** A custom Artisan command was built to monitor active incidents and execute resolution workflows based on real data exported from the ML pipeline.
+2. **Response Policy Logic:** Mapped specific anomalies to automated actions:
+   * `LATENCY_SPIKE` → Executed simulated `restart_service` action.
+   * `ERROR_STORM` → Executed simulated `send_alert` action.
+   * `TRAFFIC_SURGE` → Executed simulated `scale_service` action.
+3. **Escalation Handling:** Implemented strict safety guardrails. If an incident has a `CRITICAL` severity, or if automated actions fail consecutively (attempts >= 2), the system aborts automation and triggers a `CRITICAL_ALERT_ESCALATION` to human operators.
+4. **Response Logging:** Every evaluated incident produces a structured log entry containing `incident_id`, `action_taken`, `timestamp`, `result`, and `notes`. These records are successfully persisted in `storage/aiops/responses.json`.

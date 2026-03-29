@@ -140,3 +140,41 @@ else:
     print(f"  Lab 1 anomaly at {lab1_anomaly} not detected")
 
 print("\n Lab 3 Complete!")
+import os
+import json
+
+
+# 8) Bridging ML to Laravel Automation Engine
+
+print("\n[7/7] Exporting incidents to Laravel...")
+
+# 1. Load the data we just generated
+df_preds = pd.read_csv('anomaly_predictions.csv', index_col='timestamp')
+df_feats = pd.read_csv('aiops_dataset.csv', index_col='timestamp')
+df_merged = df_feats.join(df_preds)
+
+# 2. Filter only the real anomalies
+real_anomalies = df_merged[df_merged['is_anomaly'] == True]
+
+incidents = []
+for i, (timestamp, row) in enumerate(real_anomalies.iterrows()):
+    # Determine the type of incident dynamically
+    inc_type = "LATENCY_SPIKE"
+    if row.get('error_rate', 0) > 0.05:
+        inc_type = "ERROR_STORM"
+        
+    incidents.append({
+        "id": f"INC-AUTO-{i+1:03d}",
+        "type": inc_type,
+        "severity": "CRITICAL" if row['anomaly_score'] > 0.1 else "HIGH",
+        "status": "OPEN",
+        "attempts": 0,
+        "timestamp": str(timestamp)
+    })
+
+# 3. Save directly to Laravel's storage folder
+os.makedirs('storage/aiops', exist_ok=True)
+with open('storage/aiops/incidents.json', 'w') as f:
+    json.dump(incidents, f, indent=4)
+
+print(" Successfully exported real anomalies to storage/aiops/incidents.json")

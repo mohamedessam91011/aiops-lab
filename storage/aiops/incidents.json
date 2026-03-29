@@ -1,0 +1,74 @@
+[
+    {
+        "id": "INC-AUTO-001",
+        "type": "ERROR_STORM",
+        "severity": "HIGH",
+        "status": "RESOLVED",
+        "attempts": 1,
+        "timestamp": "2026-03-12 20:00:00"
+    },
+    {
+        "id": "INC-AUTO-002",
+        "type": "ERROR_STORM",
+        "severity": "HIGH",
+        "status": "RESOLVED",
+        "attempts": 1,
+        "timestamp": "2026-03-12 20:03:00"
+    },
+    {
+        "id": "INC-AUTO-003",
+        "type": "LATENCY_SPIKE",
+        "severity": "HIGH",
+        "status": "RESOLVED",
+        "attempts": 1,
+        "timestamp": "2026-03-12 20:03:30"
+    },
+    {
+        "id": "INC-AUTO-004",
+        "type": "LATENCY_SPIKE",
+        "severity": "CRITICAL",
+        "status": "ESCALATED",
+        "attempts": 1,
+        "timestamp": "2026-03-12 20:05:30"
+    },
+    {
+        "id": "INC-AUTO-005",
+        "type": "ERROR_STORM",
+        "severity": "HIGH",
+        "status": "RESOLVED",
+        "attempts": 1,
+        "timestamp": "2026-03-12 20:06:00"
+    },
+    {
+        "id": "INC-AUTO-006",
+        "type": "ERROR_STORM",
+        "severity": "HIGH",
+        "status": "OPEN",
+        "attempts": 1,
+        "timestamp": "2026-03-12 20:06:30"
+    },
+    {
+        "id": "INC-AUTO-007",
+        "type": "LATENCY_SPIKE",
+        "severity": "CRITICAL",
+        "status": "ESCALATED",
+        "attempts": 1,
+        "timestamp": "2026-03-12 20:07:00"
+    },
+    {
+        "id": "INC-AUTO-008",
+        "type": "LATENCY_SPIKE",
+        "severity": "HIGH",
+        "status": "RESOLVED",
+        "attempts": 1,
+        "timestamp": "2026-03-12 20:08:00"
+    },
+    {
+        "id": "INC-AUTO-009",
+        "type": "ERROR_STORM",
+        "severity": "HIGH",
+        "status": "RESOLVED",
+        "attempts": 1,
+        "timestamp": "2026-03-12 20:09:00"
+    }
+]
