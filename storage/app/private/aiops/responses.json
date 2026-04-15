@@ -1,0 +1,247 @@
+[
+    {
+        "incident_id": "INC-AUTO-001",
+        "action_taken": "CRITICAL_ALERT_ESCALATION",
+        "timestamp": "2026-04-15T12:34:18+00:00",
+        "result": "ESCALATED",
+        "notes": "Escalated to human operators. Automated action bypassed."
+    },
+    {
+        "incident_id": "INC-AUTO-002",
+        "action_taken": "send_alert",
+        "timestamp": "2026-04-15T12:34:18+00:00",
+        "result": "SUCCESS",
+        "notes": "Automated policy executed successfully."
+    },
+    {
+        "incident_id": "INC-AUTO-003",
+        "action_taken": "rate_limit",
+        "timestamp": "2026-04-15T12:34:18+00:00",
+        "result": "SUCCESS",
+        "notes": "Automated policy executed successfully."
+    },
+    {
+        "incident_id": "INC-AUTO-004",
+        "action_taken": "send_alert",
+        "timestamp": "2026-04-15T12:34:18+00:00",
+        "result": "SUCCESS",
+        "notes": "Automated policy executed successfully."
+    },
+    {
+        "incident_id": "INC-AUTO-005",
+        "action_taken": "send_alert",
+        "timestamp": "2026-04-15T12:34:18+00:00",
+        "result": "FAILED",
+        "notes": "Automated policy executed successfully."
+    },
+    {
+        "incident_id": "INC-AUTO-006",
+        "action_taken": "rate_limit",
+        "timestamp": "2026-04-15T12:34:18+00:00",
+        "result": "SUCCESS",
+        "notes": "Automated policy executed successfully."
+    },
+    {
+        "incident_id": "INC-AUTO-007",
+        "action_taken": "send_alert",
+        "timestamp": "2026-04-15T12:34:18+00:00",
+        "result": "SUCCESS",
+        "notes": "Automated policy executed successfully."
+    },
+    {
+        "incident_id": "INC-WVNLIC",
+        "action_taken": "CRITICAL_ALERT_ESCALATION",
+        "timestamp": "2026-04-15T12:34:18+00:00",
+        "result": "ESCALATED",
+        "notes": "Escalated to human operators. Automated action bypassed."
+    },
+    {
+        "incident_id": "INC-HC31KC",
+        "action_taken": "CRITICAL_ALERT_ESCALATION",
+        "timestamp": "2026-04-15T12:34:18+00:00",
+        "result": "ESCALATED",
+        "notes": "Escalated to human operators. Automated action bypassed."
+    },
+    {
+        "incident_id": "INC-HYN9TF",
+        "action_taken": "CRITICAL_ALERT_ESCALATION",
+        "timestamp": "2026-04-15T12:34:18+00:00",
+        "result": "ESCALATED",
+        "notes": "Escalated to human operators. Automated action bypassed."
+    },
+    {
+        "incident_id": "INC-HJQBIX",
+        "action_taken": "CRITICAL_ALERT_ESCALATION",
+        "timestamp": "2026-04-15T12:34:18+00:00",
+        "result": "ESCALATED",
+        "notes": "Escalated to human operators. Automated action bypassed."
+    },
+    {
+        "incident_id": "INC-KSSC4T",
+        "action_taken": "CRITICAL_ALERT_ESCALATION",
+        "timestamp": "2026-04-15T12:34:18+00:00",
+        "result": "ESCALATED",
+        "notes": "Escalated to human operators. Automated action bypassed."
+    },
+    {
+        "incident_id": "INC-8YX0XJ",
+        "action_taken": "CRITICAL_ALERT_ESCALATION",
+        "timestamp": "2026-04-15T12:34:18+00:00",
+        "result": "ESCALATED",
+        "notes": "Escalated to human operators. Automated action bypassed."
+    },
+    {
+        "incident_id": "INC-EXCQPC",
+        "action_taken": "CRITICAL_ALERT_ESCALATION",
+        "timestamp": "2026-04-15T12:34:18+00:00",
+        "result": "ESCALATED",
+        "notes": "Escalated to human operators. Automated action bypassed."
+    },
+    {
+        "incident_id": "INC-P0RDVB",
+        "action_taken": "CRITICAL_ALERT_ESCALATION",
+        "timestamp": "2026-04-15T12:34:18+00:00",
+        "result": "ESCALATED",
+        "notes": "Escalated to human operators. Automated action bypassed."
+    },
+    {
+        "incident_id": "INC-A4LM7Z",
+        "action_taken": "CRITICAL_ALERT_ESCALATION",
+        "timestamp": "2026-04-15T12:34:18+00:00",
+        "result": "ESCALATED",
+        "notes": "Escalated to human operators. Automated action bypassed."
+    },
+    {
+        "incident_id": "INC-VVURUI",
+        "action_taken": "CRITICAL_ALERT_ESCALATION",
+        "timestamp": "2026-04-15T12:34:18+00:00",
+        "result": "ESCALATED",
+        "notes": "Escalated to human operators. Automated action bypassed."
+    },
+    {
+        "incident_id": "INC-OLDHU7",
+        "action_taken": "CRITICAL_ALERT_ESCALATION",
+        "timestamp": "2026-04-15T12:34:18+00:00",
+        "result": "ESCALATED",
+        "notes": "Escalated to human operators. Automated action bypassed."
+    },
+    {
+        "incident_id": "INC-L0H2Q2",
+        "action_taken": "CRITICAL_ALERT_ESCALATION",
+        "timestamp": "2026-04-15T12:34:18+00:00",
+        "result": "ESCALATED",
+        "notes": "Escalated to human operators. Automated action bypassed."
+    },
+    {
+        "incident_id": "INC-AUTO-001",
+        "action_taken": "CRITICAL_ALERT_ESCALATION",
+        "timestamp": "2026-04-15T12:35:51+00:00",
+        "result": "ESCALATED",
+        "notes": "Escalated to human operators. Automated action bypassed."
+    },
+    {
+        "incident_id": "INC-AUTO-005",
+        "action_taken": "send_alert",
+        "timestamp": "2026-04-15T12:35:51+00:00",
+        "result": "SUCCESS",
+        "notes": "Automated policy executed successfully."
+    },
+    {
+        "incident_id": "INC-WVNLIC",
+        "action_taken": "CRITICAL_ALERT_ESCALATION",
+        "timestamp": "2026-04-15T12:35:51+00:00",
+        "result": "ESCALATED",
+        "notes": "Escalated to human operators. Automated action bypassed."
+    },
+    {
+        "incident_id": "INC-HC31KC",
+        "action_taken": "CRITICAL_ALERT_ESCALATION",
+        "timestamp": "2026-04-15T12:35:51+00:00",
+        "result": "ESCALATED",
+        "notes": "Escalated to human operators. Automated action bypassed."
+    },
+    {
+        "incident_id": "INC-HYN9TF",
+        "action_taken": "CRITICAL_ALERT_ESCALATION",
+        "timestamp": "2026-04-15T12:35:51+00:00",
+        "result": "ESCALATED",
+        "notes": "Escalated to human operators. Automated action bypassed."
+    },
+    {
+        "incident_id": "INC-HJQBIX",
+        "action_taken": "CRITICAL_ALERT_ESCALATION",
+        "timestamp": "2026-04-15T12:35:51+00:00",
+        "result": "ESCALATED",
+        "notes": "Escalated to human operators. Automated action bypassed."
+    },
+    {
+        "incident_id": "INC-KSSC4T",
+        "action_taken": "CRITICAL_ALERT_ESCALATION",
+        "timestamp": "2026-04-15T12:35:51+00:00",
+        "result": "ESCALATED",
+        "notes": "Escalated to human operators. Automated action bypassed."
+    },
+    {
+        "incident_id": "INC-8YX0XJ",
+        "action_taken": "CRITICAL_ALERT_ESCALATION",
+        "timestamp": "2026-04-15T12:35:51+00:00",
+        "result": "ESCALATED",
+        "notes": "Escalated to human operators. Automated action bypassed."
+    },
+    {
+        "incident_id": "INC-EXCQPC",
+        "action_taken": "CRITICAL_ALERT_ESCALATION",
+        "timestamp": "2026-04-15T12:35:51+00:00",
+        "result": "ESCALATED",
+        "notes": "Escalated to human operators. Automated action bypassed."
+    },
+    {
+        "incident_id": "INC-P0RDVB",
+        "action_taken": "CRITICAL_ALERT_ESCALATION",
+        "timestamp": "2026-04-15T12:35:51+00:00",
+        "result": "ESCALATED",
+        "notes": "Escalated to human operators. Automated action bypassed."
+    },
+    {
+        "incident_id": "INC-A4LM7Z",
+        "action_taken": "CRITICAL_ALERT_ESCALATION",
+        "timestamp": "2026-04-15T12:35:51+00:00",
+        "result": "ESCALATED",
+        "notes": "Escalated to human operators. Automated action bypassed."
+    },
+    {
+        "incident_id": "INC-VVURUI",
+        "action_taken": "CRITICAL_ALERT_ESCALATION",
+        "timestamp": "2026-04-15T12:35:51+00:00",
+        "result": "ESCALATED",
+        "notes": "Escalated to human operators. Automated action bypassed."
+    },
+    {
+        "incident_id": "INC-OLDHU7",
+        "action_taken": "CRITICAL_ALERT_ESCALATION",
+        "timestamp": "2026-04-15T12:35:51+00:00",
+        "result": "ESCALATED",
+        "notes": "Escalated to human operators. Automated action bypassed."
+    },
+    {
+        "incident_id": "INC-L0H2Q2",
+        "action_taken": "CRITICAL_ALERT_ESCALATION",
+        "timestamp": "2026-04-15T12:35:51+00:00",
+        "result": "ESCALATED",
+        "notes": "Escalated to human operators. Automated action bypassed."
+    },
+    {
+        "incident_id": "INC-H8VMSR",
+        "action_taken": "CRITICAL_ALERT_ESCALATION",
+        "timestamp": "2026-04-15T12:35:51+00:00",
+        "result": "ESCALATED",
+        "notes": "Escalated to human operators. Automated action bypassed."
+    },
+    {
+        "incident_id": "INC-UBX8AY",
+        "action_taken": "CRITICAL_ALERT_ESCALATION",
+        "timestamp": "2026-04-15T12:35:51+00:00",
+        "result": "ESCALATED",
+        "notes": "Escalated to human operators. Automated action bypassed."
+    }
+]

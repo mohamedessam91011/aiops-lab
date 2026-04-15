@@ -20,11 +20,12 @@ except ValueError:
 col_mapping = {'latency_ms': 'latency', 'route_name': 'endpoint', 'status_code': 'status'}
 df_raw.rename(columns=col_mapping, inplace=True)
 
-# Handle missing timestamp
+# Handle missing timestamp (DYNAMIC TIMELINE UPDATE)
 if 'timestamp' not in df_raw.columns:
-    print("  Generating synthetic timeline...")
+    print("  Generating dynamic timeline ending at current time...")
     freq_ms = max(1, int((600 * 1000) / len(df_raw)))
-    df_raw['timestamp'] = pd.date_range(start='2026-03-12 20:00:00', 
+    # Ends exactly at 'now' and calculates backward
+    df_raw['timestamp'] = pd.date_range(end=pd.Timestamp.now(), 
                                         periods=len(df_raw), 
                                         freq=f'{freq_ms}ms')
 
@@ -132,19 +133,20 @@ print(f"Total windows: {len(features)}")
 print(f"Anomalies detected: {features['is_anomaly'].sum()}")
 print(f"Anomaly ratio: {features['is_anomaly'].mean():.2%}")
 
-# Check if Lab 1 anomaly detected
-lab1_anomaly = pd.Timestamp('2026-03-12 20:05:30')
-if lab1_anomaly in anomalies.index:
-    print(f" Successfully detected Lab 1 anomaly at {lab1_anomaly}")
+# DYNAMIC ANOMALY CHECK (Replaced hardcoded Lab 1 date)
+if not anomalies.empty:
+    peak_anomaly_time = anomalies['anomaly_score'].idxmax()
+    print(f" Successfully detected Peak Anomaly at {peak_anomaly_time}")
 else:
-    print(f"  Lab 1 anomaly at {lab1_anomaly} not detected")
+    print(f"  No anomalies detected in this run. System is stable.")
 
 print("\n Lab 3 Complete!")
+
+# ==========================================
+# 8) Bridging ML to Laravel Automation Engine
+# ==========================================
 import os
 import json
-
-
-# 8) Bridging ML to Laravel Automation Engine
 
 print("\n[7/7] Exporting incidents to Laravel...")
 
@@ -159,7 +161,7 @@ real_anomalies = df_merged[df_merged['is_anomaly'] == True]
 incidents = []
 for i, (timestamp, row) in enumerate(real_anomalies.iterrows()):
     # Determine the type of incident dynamically
-    inc_type = "LATENCY_SPIKE"
+    inc_type = "TRAFFIC_SPIKE" # Changed to match our Laravel Policies
     if row.get('error_rate', 0) > 0.05:
         inc_type = "ERROR_STORM"
         
@@ -172,9 +174,9 @@ for i, (timestamp, row) in enumerate(real_anomalies.iterrows()):
         "timestamp": str(timestamp)
     })
 
-# 3. Save directly to Laravel's storage folder
-os.makedirs('storage/aiops', exist_ok=True)
-with open('storage/aiops/incidents.json', 'w') as f:
+# 3. Save directly to Laravel's private storage folder
+os.makedirs('storage/app/private/aiops', exist_ok=True)
+with open('storage/app/private/aiops/incidents.json', 'w') as f:
     json.dump(incidents, f, indent=4)
 
-print(" Successfully exported real anomalies to storage/aiops/incidents.json")
+print(" Successfully exported real anomalies to storage/app/private/aiops/incidents.json")

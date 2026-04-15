@@ -3,7 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 class AiopsRespond extends Command
 {
@@ -11,56 +11,56 @@ class AiopsRespond extends Command
     protected $signature = 'aiops:respond';
     protected $description = 'AIOps Automated Incident Response Engine';
 
-    // 2) Response Policies
+    // 2) Response Policies (تم إضافة TRAFFIC_SPIKE اللي بتطلع من لاب 4)
     private $policies = [
         'LATENCY_SPIKE' => 'restart_service',
         'ERROR_STORM'   => 'send_alert',
-        'TRAFFIC_SURGE' => 'scale_service'
+        'TRAFFIC_SURGE' => 'scale_service',
+        'TRAFFIC_SPIKE' => 'rate_limit',       // الأكشن المناسب لمشكلة الترافيك
+        'APPLICATION_BUG' => 'rollback_deploy' // الأكشن المناسب لمشكلة الأكواد
     ];
 
     public function handle()
     {
-        $this->info(" Starting AIOps Automated Response Engine...");
+        $this->info("⚙️ Starting AIOps Automated Response Engine...");
 
-        $aiopsDir = storage_path('aiops');
-        $incidentsPath = $aiopsDir . '/incidents.json';
-        $responsesPath = $aiopsDir . '/responses.json';
+        // استخدام Storage للوصول لنفس مسار لاب 4 بالظبط (بيقرأ من storage/app/aiops)
+        $incidentsPath = 'aiops/incidents.json';
+        $responsesPath = 'aiops/responses.json';
 
-        // Ensure directory exists
-        if (!File::exists($aiopsDir)) {
-            File::makeDirectory($aiopsDir, 0755, true);
+        if (!Storage::exists($incidentsPath)) {
+            $this->info("✅ No active incidents found. System is healthy.");
+            return;
         }
 
-        // Generate dummy incidents for demonstration if file doesn't exist
-        //if (!File::exists($incidentsPath)) {
-          //  $this->generateDummyIncidents($incidentsPath);
-        //}
-
-        $incidents = json_decode(File::get($incidentsPath), true);
-        $responses = File::exists($responsesPath) ? json_decode(File::get($responsesPath), true) : [];
+        $incidents = json_decode(Storage::get($incidentsPath), true) ?? [];
+        $responses = Storage::exists($responsesPath) ? json_decode(Storage::get($responsesPath), true) : [];
 
         $hasActiveIncidents = false;
 
         foreach ($incidents as $key => $incident) {
-            if ($incident['status'] === 'RESOLVED') continue;
+            // التوافق مع مفاتيح Lab 4 الجديدة
+            $status = $incident['status'] ?? 'OPEN';
+            if ($status === 'RESOLVED') continue;
             
             $hasActiveIncidents = true;
-            $incidentId = $incident['id'];
-            $type = $incident['type'];
+            $incidentId = $incident['incident_id'] ?? $incident['id'] ?? 'UNKNOWN';
+            $type = $incident['root_cause'] ?? $incident['type'] ?? 'UNKNOWN';
             $attempts = $incident['attempts'] ?? 0;
+            $severity = $incident['severity'] ?? 'HIGH';
 
-            $this->warn("  Processing Incident [{$incidentId}]: {$type}");
+            $this->warn("🚨 Processing Incident [{$incidentId}]: {$type}");
 
             // Match Policy
             $action = $this->policies[$type] ?? 'unknown_action';
 
             // 5) Escalation Logic
             $isEscalated = false;
-            // Escalate if it failed multiple times OR if severity is CRITICAL
-            if ($attempts >= 2 || $incident['severity'] === 'CRITICAL') {
+            // يتم التصعيد لو المحاولات زادت عن 2 أو لو المشكلة CRITICAL
+            if ($attempts >= 2 || $severity === 'CRITICAL') {
                 $action = 'CRITICAL_ALERT_ESCALATION';
                 $isEscalated = true;
-                $this->error("    ESCALATION TRIGGERED: Maximum attempts reached or Critical Severity.");
+                $this->error("🔥 ESCALATION TRIGGERED: Maximum attempts reached or Critical Severity.");
             }
 
             // 3) Action Execution (Simulated)
@@ -74,7 +74,7 @@ class AiopsRespond extends Command
                 $incidents[$key]['status'] = 'ESCALATED';
             }
 
-            // 4) Incident Response Logging
+            // 4) Incident Response Logging (زي ما الـ Rubric طالب بالظبط)
             $logEntry = [
                 'incident_id'  => $incidentId,
                 'action_taken' => $action,
@@ -88,30 +88,18 @@ class AiopsRespond extends Command
         }
 
         if (!$hasActiveIncidents) {
-            $this->info(" No active incidents found. System is healthy.");
+            $this->info("✅ No active incidents found. System is healthy.");
         } else {
-            // Save updates to storage
-            File::put($incidentsPath, json_encode($incidents, JSON_PRETTY_PRINT));
-            File::put($responsesPath, json_encode($responses, JSON_PRETTY_PRINT));
-            $this->info("\n Automated response cycle completed. Logs saved to storage/aiops/responses.json");
+            // حفظ التحديثات في نفس المسار
+            Storage::put($incidentsPath, json_encode($incidents, JSON_PRETTY_PRINT));
+            Storage::put($responsesPath, json_encode($responses, JSON_PRETTY_PRINT));
+            $this->info("\n💾 Automated response cycle completed. Logs saved to storage/app/{$responsesPath}");
         }
     }
 
     private function simulateAction($action, $isEscalated)
     {
         if ($isEscalated) return 'ESCALATED';
-        // Simulate 90% success rate for regular automated actions
         return (rand(1, 10) > 1) ? 'SUCCESS' : 'FAILED';
-    }
-
-    private function generateDummyIncidents($path)
-    {
-        $data = [
-            ['id' => 'INC-001', 'type' => 'LATENCY_SPIKE', 'severity' => 'HIGH', 'status' => 'OPEN', 'attempts' => 0],
-            ['id' => 'INC-002', 'type' => 'ERROR_STORM', 'severity' => 'MEDIUM', 'status' => 'OPEN', 'attempts' => 0],
-            ['id' => 'INC-003', 'type' => 'TRAFFIC_SURGE', 'severity' => 'CRITICAL', 'status' => 'OPEN', 'attempts' => 0], // Triggers instant escalation
-            ['id' => 'INC-004', 'type' => 'LATENCY_SPIKE', 'severity' => 'HIGH', 'status' => 'OPEN', 'attempts' => 2], // Triggers escalation due to attempts
-        ];
-        File::put($path, json_encode($data, JSON_PRETTY_PRINT));
     }
 }

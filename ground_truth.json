@@ -1,6 +1,6 @@
 {
-    "anomaly_start_iso": "2026-03-04T20:15:50.298528",
-    "anomaly_end_iso": "2026-03-04T21:09:42.980331",
+    "anomaly_start_iso": "2026-04-15T13:48:01.976820",
+    "anomaly_end_iso": "2026-04-15T14:41:20.293793",
     "anomaly_type": "Latency Spike",
     "expected_behavior": "Increase in TIMEOUT_ERROR in logs and Grafana"
 }

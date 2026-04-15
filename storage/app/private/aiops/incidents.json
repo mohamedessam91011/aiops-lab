@@ -1,0 +1,626 @@
+[
+    {
+        "id": "INC-AUTO-001",
+        "type": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "status": "ESCALATED",
+        "attempts": 2,
+        "timestamp": "2026-04-15 14:12:00"
+    },
+    {
+        "id": "INC-AUTO-002",
+        "type": "ERROR_STORM",
+        "severity": "HIGH",
+        "status": "RESOLVED",
+        "attempts": 1,
+        "timestamp": "2026-04-15 14:15:30"
+    },
+    {
+        "id": "INC-AUTO-003",
+        "type": "TRAFFIC_SPIKE",
+        "severity": "HIGH",
+        "status": "RESOLVED",
+        "attempts": 1,
+        "timestamp": "2026-04-15 14:18:00"
+    },
+    {
+        "id": "INC-AUTO-004",
+        "type": "ERROR_STORM",
+        "severity": "HIGH",
+        "status": "RESOLVED",
+        "attempts": 1,
+        "timestamp": "2026-04-15 14:18:30"
+    },
+    {
+        "id": "INC-AUTO-005",
+        "type": "ERROR_STORM",
+        "severity": "HIGH",
+        "status": "RESOLVED",
+        "attempts": 2,
+        "timestamp": "2026-04-15 14:19:00"
+    },
+    {
+        "id": "INC-AUTO-006",
+        "type": "TRAFFIC_SPIKE",
+        "severity": "HIGH",
+        "status": "RESOLVED",
+        "attempts": 1,
+        "timestamp": "2026-04-15 14:19:30"
+    },
+    {
+        "id": "INC-AUTO-007",
+        "type": "ERROR_STORM",
+        "severity": "HIGH",
+        "status": "RESOLVED",
+        "attempts": 1,
+        "timestamp": "2026-04-15 14:21:30"
+    },
+    {
+        "incident_id": "INC-WVNLIC",
+        "timestamp": "2026-04-15T12:22:34+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        },
+        "attempts": 2,
+        "status": "ESCALATED"
+    },
+    {
+        "incident_id": "INC-HC31KC",
+        "timestamp": "2026-04-15T12:23:34+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        },
+        "attempts": 2,
+        "status": "ESCALATED"
+    },
+    {
+        "incident_id": "INC-HYN9TF",
+        "timestamp": "2026-04-15T12:24:34+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        },
+        "attempts": 2,
+        "status": "ESCALATED"
+    },
+    {
+        "incident_id": "INC-HJQBIX",
+        "timestamp": "2026-04-15T12:25:34+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        },
+        "attempts": 2,
+        "status": "ESCALATED"
+    },
+    {
+        "incident_id": "INC-KSSC4T",
+        "timestamp": "2026-04-15T12:26:34+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        },
+        "attempts": 2,
+        "status": "ESCALATED"
+    },
+    {
+        "incident_id": "INC-8YX0XJ",
+        "timestamp": "2026-04-15T12:27:34+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        },
+        "attempts": 2,
+        "status": "ESCALATED"
+    },
+    {
+        "incident_id": "INC-EXCQPC",
+        "timestamp": "2026-04-15T12:28:35+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        },
+        "attempts": 2,
+        "status": "ESCALATED"
+    },
+    {
+        "incident_id": "INC-P0RDVB",
+        "timestamp": "2026-04-15T12:29:35+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        },
+        "attempts": 2,
+        "status": "ESCALATED"
+    },
+    {
+        "incident_id": "INC-A4LM7Z",
+        "timestamp": "2026-04-15T12:30:35+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        },
+        "attempts": 2,
+        "status": "ESCALATED"
+    },
+    {
+        "incident_id": "INC-VVURUI",
+        "timestamp": "2026-04-15T12:31:35+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        },
+        "attempts": 2,
+        "status": "ESCALATED"
+    },
+    {
+        "incident_id": "INC-OLDHU7",
+        "timestamp": "2026-04-15T12:32:35+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        },
+        "attempts": 2,
+        "status": "ESCALATED"
+    },
+    {
+        "incident_id": "INC-L0H2Q2",
+        "timestamp": "2026-04-15T12:33:35+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        },
+        "attempts": 2,
+        "status": "ESCALATED"
+    },
+    {
+        "incident_id": "INC-H8VMSR",
+        "timestamp": "2026-04-15T12:34:35+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        },
+        "attempts": 1,
+        "status": "ESCALATED"
+    },
+    {
+        "incident_id": "INC-UBX8AY",
+        "timestamp": "2026-04-15T12:35:35+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        },
+        "attempts": 1,
+        "status": "ESCALATED"
+    },
+    {
+        "incident_id": "INC-VVNIGD",
+        "timestamp": "2026-04-15T12:36:35+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-SYJTVY",
+        "timestamp": "2026-04-15T12:37:35+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-XGGY6H",
+        "timestamp": "2026-04-15T12:38:35+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-FQMQJN",
+        "timestamp": "2026-04-15T12:39:35+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-UUCUJA",
+        "timestamp": "2026-04-15T12:40:35+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-1HSHGD",
+        "timestamp": "2026-04-15T12:41:35+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-XNHUJ4",
+        "timestamp": "2026-04-15T12:42:36+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-3EC2FZ",
+        "timestamp": "2026-04-15T12:43:36+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-HUJCAF",
+        "timestamp": "2026-04-15T12:44:36+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-D3W1FG",
+        "timestamp": "2026-04-15T12:45:36+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-OMDTAK",
+        "timestamp": "2026-04-15T12:46:36+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-YUNOG1",
+        "timestamp": "2026-04-15T12:47:36+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-CW9H2Q",
+        "timestamp": "2026-04-15T12:48:36+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-ZVM4KC",
+        "timestamp": "2026-04-15T12:49:36+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-VBVZK6",
+        "timestamp": "2026-04-15T12:50:36+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-GNS0TK",
+        "timestamp": "2026-04-15T12:51:36+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-90XNNJ",
+        "timestamp": "2026-04-15T12:52:36+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-41FR9H",
+        "timestamp": "2026-04-15T12:53:36+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-SQBXEH",
+        "timestamp": "2026-04-15T12:54:36+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-BPLVQJ",
+        "timestamp": "2026-04-15T12:55:36+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-XBXE0C",
+        "timestamp": "2026-04-15T12:56:36+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-QKOHNG",
+        "timestamp": "2026-04-15T12:57:37+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-VUHJNJ",
+        "timestamp": "2026-04-15T12:58:37+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-EBGB5Z",
+        "timestamp": "2026-04-15T12:59:37+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-FFMAWS",
+        "timestamp": "2026-04-15T13:00:37+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-RHAPKY",
+        "timestamp": "2026-04-15T13:01:37+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-7RTB5D",
+        "timestamp": "2026-04-15T13:02:37+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-0CCZXJ",
+        "timestamp": "2026-04-15T13:03:37+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-ML4RIK",
+        "timestamp": "2026-04-15T13:04:37+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-U1IOML",
+        "timestamp": "2026-04-15T13:05:37+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-INUHNR",
+        "timestamp": "2026-04-15T13:06:37+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-O7RJL6",
+        "timestamp": "2026-04-15T13:07:37+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-IZBPVD",
+        "timestamp": "2026-04-15T13:08:37+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-QALRRU",
+        "timestamp": "2026-04-15T13:09:37+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-M452CR",
+        "timestamp": "2026-04-15T13:10:37+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-B7WJJW",
+        "timestamp": "2026-04-15T13:11:38+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-VCCTFZ",
+        "timestamp": "2026-04-15T13:12:38+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-CWHQI3",
+        "timestamp": "2026-04-15T13:13:38+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-HXJNPL",
+        "timestamp": "2026-04-15T13:14:38+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-OPQ7RJ",
+        "timestamp": "2026-04-15T13:15:38+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-IXBGAV",
+        "timestamp": "2026-04-15T13:16:38+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-RY5DLX",
+        "timestamp": "2026-04-15T13:17:38+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-TYC7C8",
+        "timestamp": "2026-04-15T13:18:38+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-8DJYRC",
+        "timestamp": "2026-04-15T13:19:38+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-IJGPBF",
+        "timestamp": "2026-04-15T13:20:38+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    },
+    {
+        "incident_id": "INC-C9QKIN",
+        "timestamp": "2026-04-15T13:21:38+00:00",
+        "root_cause": "TRAFFIC_SPIKE",
+        "severity": "CRITICAL",
+        "signals": {
+            "anomaly_score": 0.014718418493138263
+        }
+    }
+]

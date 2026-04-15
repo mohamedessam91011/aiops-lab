@@ -1,0 +1,14 @@
+{
+    "incident_id": "INC-RCA-2B0F1CC3",
+    "timestamp": "2026-04-15T14:24:55.285125",
+    "root_cause_endpoint": "api/slow",
+    "primary_signal": "latency",
+    "supporting_evidence": {
+        "peak_latency_ms": 7103.11,
+        "average_latency_ms": 4517.47,
+        "total_errors_in_window": 654,
+        "predominant_error_type": "TIMEOUT_ERROR"
+    },
+    "confidence_score": "95%",
+    "recommended_action": "Apply Rate Limiting or isolate endpoint api/slow. Investigate backend logic for TIMEOUT_ERROR."
+}
